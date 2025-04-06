@@ -1,0 +1,88 @@
+{
+    "args": {
+        "dataset": "FashionMNIST",
+        "model": "LeNet",
+        "num_client": 10,
+        "client_ratio": 0.5,
+        "num_round": 100,
+        "i_seed": 1234,
+        "res_root": "./results",
+        "distribution_type": "non_iid_label",
+        "alpha": 0.1,
+        "fed_algo": "FedHyb",
+        "num_local_epoch": 3,
+        "batch_size": 64,
+        "learning_rate": 0.01,
+        "momentum": 0.9,
+        "weight_decay": 1e-05,
+        "fedprox_mu": 0.001,
+        "scaffold_c_lr": 0.001,
+        "fednova_tau_eff": "uniform",
+        "phase1_rounds": 2,
+        "phase2_rounds": 2,
+        "phase1_client_ratio": 0.5,
+        "phase2_client_ratio": 0.5,
+        "phase2_learning_rate": 0.01,
+        "scaffold_for_phase1": true,
+        "use_clustering": true,
+        "use_reputation": true,
+        "clustering_threshold": 0.4,
+        "fedhyb_cluster_count": 2,
+        "fedhyb_distance_threshold": 1,
+        "fedhyb_size_threshold": 0.45,
+        "num_malicious_tolerance": 2,
+        "multikrum_k": 1,
+        "use_distances_as_weights": false,
+        "bulyan_beta": 1.0,
+        "trimmed_ratio": 0.4,
+        "trim_k": null,
+        "auror_n_clusters": 2,
+        "auror_distance_threshold": 0.5,
+        "auror_size_threshold": 0.45,
+        "enable_attack": false,
+        "num_malicious": 2,
+        "attack_type": "sign_flip",
+        "noise_level": 1.0,
+        "use_historical_gradients": false,
+        "gradient_decay": 3,
+        "gradient_threshold": 0.2,
+        "total_rounds": 4
+    },
+    "communication_costs": {
+        "server_to_client": [
+            0.8473587036132812,
+            0.677886962890625,
+            0.7983016967773438,
+            0.7983016967773438
+        ],
+        "client_to_server": [
+            0.8473587036132812,
+            0.677886962890625,
+            0.7983016967773438,
+            0.7983016967773438
+        ],
+        "total_per_round": [
+            1.6947174072265625,
+            1.35577392578125,
+            1.5966033935546875,
+            1.5966033935546875
+        ],
+        "cumulative": [
+            1.6947174072265625,
+            3.0504913330078125,
+            4.6470947265625,
+            6.2436981201171875
+        ],
+        "phase": [
+            1,
+            1,
+            2,
+            2
+        ]
+    },
+    "phase1_rounds": 2,
+    "phase2_rounds": 2,
+    "final_accuracy": 0.5069,
+    "final_f1_score": 0.4225348658340079,
+    "total_communication_cost_MB": 6.2436981201171875
+}
